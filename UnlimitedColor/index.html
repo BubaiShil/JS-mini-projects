@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Start should change the Background color evey secound</h1>
+    <button class="stbtn" type="button">Start</button>
+    <button class="stobtn" type="button">Stop</button>
+</body>
+<script>
+    const st = document.querySelector(".stbtn")
+    const stopbutton = document.querySelector(".stobtn")
+
+
+    const change = () => {
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)]
+        }
+        return color;
+
+    }
+
+    let intervalID;
+
+    const start = () => {
+        if (!intervalID) {
+            intervalID = setInterval(() => {
+                document.body.style.backgroundColor = change()
+            }, 2000)
+        }
+    }
+
+
+    const stop = () => {
+        clearInterval(intervalID)
+        intervalID = null
+    }
+
+
+    console.log(change());
+    st.addEventListener("click", start)
+    stopbutton.addEventListener("click", stop)
+
+
+
+
+
+</script>
+
+</html>
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loadmore IMG</title>
+    <style>
+        .img-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-container">
+        <img src="https://picsum.photos/200/300?random=1">
+        <img src="https://picsum.photos/200/300?random=2">
+        <img src="https://picsum.photos/200/300?random=3">
+        <img src="https://picsum.photos/200/300?random=4">
+        <img src="https://picsum.photos/200/300?random=5">
+    </div>
+    <button type="button">Load More</button>
+</body>
+<script src="script.js"></script>
+
+</html>

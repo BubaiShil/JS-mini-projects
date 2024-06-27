@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG color change</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>COLOR SCHEMA SWITCHER</h1>
+
+        <span class="button" id="red"></span>
+        <span class="button" id="grey"></span>
+        <span class="button" id="black"></span>
+        <span class="button" id="yellow"></span>
+
+
+
+        <p>CLICK ON THE COLORS ABOVE TO CHANGE BACKGROUND</p>
+    </div>
+</body>
+<script>
+    const buttons= document.querySelectorAll(".button")
+    const body= document.querySelector("body")
+
+    buttons.forEach((change)=>{
+        change.addEventListener("click",(e)=>{
+            if(e.target.id==='red'){
+                body.style.backgroundColor=e.target.id;
+            }
+            if(e.target.id==="grey"){
+                body.style.backgroundColor=e.target.id;
+            }
+            if(e.target.id==="black"){
+                body.style.backgroundColor=e.target.id;
+            }
+            if(e.target.id==="yellow"){
+                body.style.backgroundColor=e.target.id;
+            }
+    
+        })
+    })
+    
+            
+</script>
+</html>
