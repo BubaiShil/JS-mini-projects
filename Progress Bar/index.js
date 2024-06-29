@@ -8,10 +8,8 @@ let currentstep = 1
 
 nextEl.addEventListener("click", () => {
     currentstep++
-    //console.log(currentstep);
     if (currentstep > stepsEl.length) {
         currentstep = stepsEl.length
-
     }
     //console.log(" after " + currentstep);
     udateProgresss()
@@ -25,7 +23,6 @@ prevEl.addEventListener("click", () => {
     }
 
     udateProgresss()
-   // console.log(currentstep);
 })
 
 
